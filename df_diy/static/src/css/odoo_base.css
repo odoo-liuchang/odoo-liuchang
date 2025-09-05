@@ -1,0 +1,9 @@
+/* List视图字段名称加粗显示 Bold display of field names in the List view */
+div.o_list_renderer .o_list_table thead th {
+   font-weight: 700
+}
+
+/* Form视图字段名称加粗显示 Bold display of field names in the Form view */
+.o_form_view .o_form_label{
+    font-weight: 700
+}
