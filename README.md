@@ -20,5 +20,7 @@ Some commonly used owl components based on Odoo 18
 
    
 3. 批量操作（add/delete/write）  
+   Batch operations (add/delete/write)
+   
    在o2m字段上使用widget=one2many_batch_operation  
-   Batch operations (add/delete/write) on o2m fields can be performed by using widget=one2many_batch_operation.
+   on o2m fields can be performed by using widget=one2many_batch_operation.
