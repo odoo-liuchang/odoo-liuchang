@@ -21,7 +21,7 @@ export class DFOne2manyListRenderer extends ListRenderer {
     /* 修改tr的背景色 change the background-color of line */
     getRowClass(record) {
         const rowClass = super.getRowClass(record);
-        if (!record.data.actual_done_date) {
+        if (!record.data.actual_done_date) {  // 给字段actual_done_date为空的行设置class（添加背景色）
             return `${rowClass} o_row_red`; // 添加自定义 CSS 类
         }
         return rowClass;
