@@ -1,0 +1,31 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_df_learning_list_tree">
+            <field name="name">df.learning.list.list</field>
+            <field name="model">df.learning.list</field>
+            <field name="arch" type="xml">
+                <list>
+                    <field name="name"/>
+                    <field name="done_date"/>
+                </list>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_df_learning_list_form">
+            <field name="name">df.learning.list.form</field>
+            <field name="model">df.learning.list</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="done_date"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

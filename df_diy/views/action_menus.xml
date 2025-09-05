@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+    <!--  Window Actions -->
+        <record model="ir.actions.act_window" id="action_df_learning_list">
+          <field name="name">学习清单</field>
+          <field name="res_model">df.learning.list</field>
+          <field name="view_mode">list,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_df_learning_record">
+          <field name="name">学习记录</field>
+          <field name="res_model">df.learning.record</field>
+          <field name="view_mode">list,form</field>
+        </record>
+
+    <!-- Menus -->
+        <menuitem name="东风学习" id="menu_df_learning_root" sequence="10"/>
+            <menuitem name="学习清单" id="menu_df_learning_list" sequence="1"
+                      parent="menu_df_learning_root"
+                      action="action_df_learning_list"/>
+            <menuitem name="学习记录" id="menu_df_learning_record" sequence="10"
+                      parent="menu_df_learning_root"
+                      action="action_df_learning_record"/>
+
+    </data>
+</odoo>

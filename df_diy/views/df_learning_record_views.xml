@@ -1,0 +1,51 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="view_df_learning_record_tree">
+            <field name="name">df.learning.record.list</field>
+            <field name="model">df.learning.record</field>
+            <field name="arch" type="xml">
+                <list decoration-danger="not done_date">
+                    <field name="name"/>
+                    <field name="done_date"/>
+                </list>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_df_learning_record_form">
+            <field name="name">df.learning.record.form</field>
+            <field name="model">df.learning.record</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="done_date"/>
+                            <field name="description"/>
+                        </group>
+                        <group>
+                            <field name="line_ids" widget="one2many_batch_operation">
+                                <list>
+                                    <field name="name" decoration-danger="plan_done_date and not actual_done_date"/>
+                                    <field name="plan_done_date"/>
+                                    <field name="actual_done_date" decoration-danger="actual_done_date &gt; plan_done_date"/>
+                                    <field name="description"/>
+                                </list>
+                                <form>
+                                     <group>
+                                        <field name="name"/>
+                                        <field name="plan_done_date"/>
+                                    </group>
+                                     <group>
+                                        <field name="actual_done_date"/>
+                                        <field name="description"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

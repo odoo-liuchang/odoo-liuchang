@@ -1,0 +1,16 @@
+/*  one2many checkbox width  */
+.o_list_view .o_list_table > thead > tr > th.o_list_select_header {
+    width: 40px !important;
+}
+
+.o_list_view .o_list_table > tbody > tr > td.o_list_select {
+    width: 40px;
+}
+
+/*  list red bg-color  */
+.o_data_row.o_row_red {
+    background-color: #ffd700 !important;  /* 金色背景 */
+    td {
+        background: inherit;  /* td自带的背景色遮挡了tr的背景色，这里需要让td的背景继承tr才会显示出tr的背景色 */
+    }
+}

@@ -1,0 +1,33 @@
+<templates>
+    <!-- One2many 字段 增加批量操作按钮 -->
+    <t t-name="df_diy.one2manyListRenderer" t-inherit="web.ListRenderer" t-inherit-mode="primary">
+        <xpath expr="//div[hasclass('o_list_renderer')]" position="before">
+            <button class="btn btn-primary btn-sm" t-on-click="onBatchAdd" style="margin-right: 5px;">
+                <i class="fa fa-plus me-1"/>
+                批量添加
+            </button>
+            <button class="btn btn-primary btn-sm" t-on-click="onBatchEdit" style="margin-right: 5px;">
+                <i class="fa fa-edit me-1"/>
+                批量修改 (<t t-esc="selectedRecordsCount"/>)
+            </button>
+            <button class="btn btn-danger btn-sm" t-on-click="onBatchDel">
+                <i class="fa fa-trash me-1"/>
+                批量删除 (<t t-esc="selectedRecordsCount"/>)
+            </button>
+        </xpath>
+        <xpath expr="//th[hasclass('o_list_record_selector')]" position="before">
+            <th class="o_list_select_header text-center" width="1">
+                <CheckBox value="selectAll" onChange.bind="toggleSelection"/>
+            </th>
+        </xpath>
+    </t>
+    <t t-name="df_diy.one2manyListRenderer.RecordRow" t-inherit="web.ListRenderer.RecordRow" t-inherit-mode="primary">
+        <xpath expr="//td[hasclass('o_list_record_selector')]" position="before">
+            <td class="o_list_select text-center" width="1">
+                <CheckBox value="record.selected"
+                          onChange.bind="(checked) => this.onRowCheckboxClick(record, checked)"
+                />
+            </td>
+        </xpath>
+    </t>
+</templates>
