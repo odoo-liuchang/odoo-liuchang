@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_df_learning_list_all,df_learning_list,model_df_learning_list,base.group_user,1,1,1,1
+access_df_learning_record_all,df_learning_record,model_df_learning_record,base.group_user,1,1,1,1
+access_df_learning_record_line_all,df_learning_record_line,model_df_learning_record_line,base.group_user,1,1,1,1
+
+access_df_learning_record_batch_modify_wizard_all,df_learning_record_batch_modify_wizard_all,model_df_learning_record_batch_modify_wizard,base.group_user,1,1,1,1

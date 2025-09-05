@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <!-- Form 视图 保存和取消按钮 显示文字 -->
+    <t t-inherit="web.FormStatusIndicator" t-inherit-mode="extension">
+        <xpath expr="//button[hasclass('o_form_button_save')]" position="inside">
+            保存
+        </xpath>
+        <xpath expr="//button[hasclass('o_form_button_cancel')]" position="inside">
+            取消
+        </xpath>
+    </t>
+</templates>
