@@ -47,5 +47,19 @@
             </field>
         </record>
 
+
+        <record model="ir.ui.view" id="view_df_learning_record_for_select_lines">
+            <field name="name">df.learning.record.multi.select.list</field>
+            <field name="model">df.learning.record</field>
+            <field name="priority">10</field>
+            <field name="arch" type="xml">
+                <list decoration-danger="not done_date" js_class="multi_select_list">
+                    <field name="name"/>
+                    <field name="done_date"/>
+                    <field name="description"/>
+                </list>
+            </field>
+        </record>
+
     </data>
 </odoo>

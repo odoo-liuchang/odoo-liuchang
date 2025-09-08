@@ -24,6 +24,7 @@
 
         'wizards/df_learning_record_batch_modify_wizard.xml',
 
+        'views/df_learning_list_views.xml',
         'views/df_learning_record_views.xml',
 
         'views/action_menus.xml',

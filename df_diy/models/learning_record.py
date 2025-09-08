@@ -42,7 +42,19 @@ class LearningRecordLine(models.Model):
 
     @api.model
     def batch_add_wizard(self, res_ids, learning_id):
+        """ 批量添加 """
         learning_list = self.env['df.learning.list'].browse(res_ids)
+        add_vals = [{
+            'name': learning.name,
+            'description': learning.description,
+            'learning_id': learning_id
+        } for learning in learning_list]
+        self.create(add_vals)
+
+    @api.model
+    def advanced_batch_add_wizard(self, res_ids, learning_id):
+        """ 高级批量添加 """
+        learning_list = self.browse(res_ids)
         add_vals = [{
             'name': learning.name,
             'description': learning.description,

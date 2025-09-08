@@ -2,9 +2,9 @@
 
 import { ListRenderer } from "@web/views/list/list_renderer";
 import { SelectCreateDialog } from "@web/views/view_dialogs/select_create_dialog";
+import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 import { useService } from "@web/core/utils/hooks";
 import { _t } from "@web/core/l10n/translation";
-import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
 
 
 export class DFOne2manyListRenderer extends ListRenderer {
@@ -154,6 +154,19 @@ export class DFOne2manyListRenderer extends ListRenderer {
                     [resIds, current_id]
                 );
             },
+        }, {
+            onClose: () => this.props.list.model.load()
+        });
+    }
+
+    // 高级批量添加 - Advanced multiple add lines
+    async onAdvancedBatchAdd () {
+        this.dialog.add(SelectCreateDialog, {
+            resModel: "df.learning.record",
+            title: _t("高级批量添加"),
+            multiSelect: false,
+            noCreate: true,
+            domain: [],
         }, {
             onClose: () => this.props.list.model.load()
         });

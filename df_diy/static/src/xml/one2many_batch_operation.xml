@@ -6,6 +6,10 @@
                 <i class="fa fa-plus me-1"/>
                 批量添加
             </button>
+            <button class="btn btn-primary btn-sm" t-on-click="onAdvancedBatchAdd" style="margin-right: 5px;">
+                <i class="fa fa-plus me-1"/><i class="fa fa-plus me-1"/>
+                高级批量添加
+            </button>
             <button class="btn btn-primary btn-sm" t-on-click="onBatchEdit" style="margin-right: 5px;">
                 <i class="fa fa-edit me-1"/>
                 批量修改 (<t t-esc="selectedRecordsCount"/>)

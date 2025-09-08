@@ -8,6 +8,7 @@ class LearningList(models.Model):
     _description = '东风的学习清单'
 
     name = fields.Char('名称', required=True)
+    done_date = fields.Date(string='完成日期')
     description = fields.Text('详情')
 
     @api.constrains('name')
